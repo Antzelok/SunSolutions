@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FaFacebook, FaGoogle, FaGithub, FaTiktok } from "react-icons/fa";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className=" text-black">
       {/* Social Icons */}
@@ -165,6 +165,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types";
 
-function SolarCard({ product }: { product: Product }) {
+const SolarCard = ({ product }: { product: Product }) => {
   return (
     <Card className="w-60 m-4 hover:scale-105 transition-transform duration-200">
       <CardHeader className="flex flex-col items-center text-center">
@@ -35,6 +35,6 @@ function SolarCard({ product }: { product: Product }) {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default SolarCard;

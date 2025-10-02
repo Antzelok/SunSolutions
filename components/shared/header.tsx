@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-function Header() {
+const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -83,6 +83,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

@@ -1,3 +1,4 @@
+import Certifications from "@/components/shared/certifications";
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
 
@@ -10,6 +11,7 @@ export default function RootLayout({
     <div className="flex h-screen flex-col">
       <Header />
       <main className="flex-1 wrapper">{children}</main>
+      <Certifications />
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import SolarCard from "@/components/product/solar-card";
 import { getAllProducts } from "@/lib/actions/product.actions";
 import { Product } from "@/types";
+import { SolarCarousel } from "@/components/product/solar-carousel";
 
 export const metadata: Metadata = {
   title: "Αρχική",
@@ -29,6 +30,10 @@ const HomePage = async () => {
         {products.map((product) => (
           <SolarCard key={product.id} product={product} />
         ))}
+      </div>
+
+      <div className="flex justify-center items-center w-full my-10">
+        <SolarCarousel />
       </div>
     </>
   );

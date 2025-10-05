@@ -15,6 +15,7 @@ const HomePage = async () => {
 
   return (
     <>
+      {/*
       <main className="flex flex-col items-center m-5 shadow-2xl">
         <section className="relative w-full min-h-[100vh]">
           <Image
@@ -41,6 +42,8 @@ const HomePage = async () => {
           </div>
         </section>
       </main>
+*/}
+
       {/* Product card */}
       <div className="flex flex-wrap justify-center my-15 gap-15">
         {products.map((product) => (

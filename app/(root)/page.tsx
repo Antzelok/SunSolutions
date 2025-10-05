@@ -15,34 +15,16 @@ const HomePage = async () => {
 
   return (
     <>
-      {/*
-      <main className="flex flex-col items-center m-5 shadow-2xl">
-        <section className="relative w-full min-h-[100vh]">
-          <Image
-            src="/images/random/burjkhalifa.png"
-            alt="Sun"
-            fill
-            className="object-cover rounded-xl"
-            priority
-          />
-
-          <div className="absolute inset-0 flex flex-col justify-center items-start bg-black/30 px-6 md:px-20">
-            <h1 className="text-4xl md:text-5xl font-bold text-orange-400 drop-shadow-lg">
-              Ηλιακή ενέργεια με επαγγελματική τοποθέτηση
-            </h1>
-            <p className="text-lg md:text-xl mt-2 text-orange-400 drop-shadow">
-              Για κάθε σπίτι, για κάθε ανάγκη.
-            </p>
-            <div className="mt-4 flex gap-4">
-              <Button className="bg-orange-400">Ζήτα Προσφορά</Button>
-              <Button className="hover:bg-orange-400" variant="default">
-                Δες Προϊόντα
-              </Button>
-            </div>
-          </div>
-        </section>
+      <main className="w-full bg-gradient-to-r from-[#A2C3E0] to-[#489CDF] rounded-xl shadow-lg p-8 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">
+          Ηλιακή ενέργεια με επαγγελματική τοποθέτηση
+        </h1>
+        <p className="text-lg text-white">Για κάθε σπίτι, για κάθε ανάγκη.</p>
+        <div className="mt-4 flex justify-center gap-4">
+          <Button className="bg-orange-400">Ζήτα Προσφορά</Button>
+          <Button variant="outline">Δες Προϊόντα</Button>
+        </div>
       </main>
-*/}
 
       {/* Product card */}
       <div className="flex flex-wrap justify-center my-15 gap-15">

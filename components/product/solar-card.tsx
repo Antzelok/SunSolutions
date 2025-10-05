@@ -30,7 +30,7 @@ const SolarCard = ({ product }: { product: Product }) => {
           {product.description}
         </CardDescription>
         <Link href={product.link}>
-          <Button className="w-full">Περισσότερα...</Button>
+          <Button className="w-full hover:bg-orange-400">Περισσότερα...</Button>
         </Link>
       </CardContent>
     </Card>

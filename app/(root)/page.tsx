@@ -16,7 +16,7 @@ const HomePage = async () => {
   return (
     <>
       <main className="flex flex-col items-center m-5 shadow-2xl">
-        <section className="relative w-full h-[70vh]">
+        <section className="relative w-full h-[100vh]">
           <Image
             src="/images/random/burjkhalifa.png"
             alt="Sun"

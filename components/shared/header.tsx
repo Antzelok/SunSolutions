@@ -15,11 +15,11 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full h-20 border-b bg-background flex items-center p-5 ">
+    <header className="w-full h-20 bg-background flex items-center p-5 bg-gradient-to-r from-[#A2C3E0] to-[#489CDF] ">
       {/* Logo  */}
       <div>
-        <h1 className="text-md sm:text-2xl font-bold uppercase text-orange-500">
-          ☀️ Sun Solutions Co.
+        <h1 className="text-md sm:text-2xl font-bold uppercase text-orange-400">
+          Sun Solutions Co.
         </h1>
       </div>
 

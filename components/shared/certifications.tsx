@@ -6,8 +6,8 @@ const Certifications = () => {
       <Image
         src="/images/random/certifications.png"
         alt="Certifications"
-        width={1920}
-        height={600}
+        width={1200}
+        height={500}
         className="w-full h-20 object-cover shadow-md"
         priority
       />

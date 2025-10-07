@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Eurostar",
@@ -9,25 +10,33 @@ const EurostarPage = () => {
   return (
     <main className="flex flex-col items-center justify-center px-6 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-7xl">
-        {/* LEFT SIDE - Images */}
+        {/* LEFT SIDE - Images in Cards */}
         <div className="flex flex-col justify-center items-center space-y-6">
-          <Image
-            src="/images/card/eurostar.png"
-            alt="Eurostar Product"
-            width={600}
-            height={200}
-            className="rounded-2xl shadow-lg object-contain"
-            priority
-          />
+          <Card className="rounded-2xl shadow-lg">
+            <CardContent className="p-0">
+              <Image
+                src="/images/card/eurostar.png"
+                alt="Eurostar Product"
+                width={600}
+                height={200}
+                className="rounded-2xl object-contain"
+                priority
+              />
+            </CardContent>
+          </Card>
 
-          <Image
-            src="/images/eurostar/eurostarMod.png"
-            alt="Eurostar Solar Heater"
-            width={600}
-            height={600}
-            className="rounded-2xl shadow-lg object-contain"
-            priority
-          />
+          <Card className="rounded-2xl shadow-lg">
+            <CardContent className="p-0">
+              <Image
+                src="/images/eurostar/eurostarMod.png"
+                alt="Eurostar Solar Heater"
+                width={600}
+                height={600}
+                className="rounded-2xl object-contain"
+                priority
+              />
+            </CardContent>
+          </Card>
         </div>
 
         {/* RIGHT SIDE - Product Info */}

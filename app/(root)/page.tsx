@@ -22,11 +22,11 @@ const HomePage = async () => {
             src="/images/random/burjkhalifa.png"
             alt="Sun"
             fill
-            className="object-cover rounded-xl"
+            className="object-cover rounded-2xl"
             priority
           />
 
-          <div className="absolute inset-0 flex flex-col justify-center items-start bg-black/30 px-6 md:px-20">
+          <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-20">
             <h1 className="text-4xl md:text-5xl font-bold text-orange-400 drop-shadow-lg">
               Ηλιακή ενέργεια με επαγγελματική τοποθέτηση
             </h1>
@@ -38,7 +38,7 @@ const HomePage = async () => {
                 <Link href="/contact">Επικοινωνία</Link>
               </Button>
               <Button asChild className="hover:bg-orange-400" variant="default">
-                Δες Προϊόντα
+                <Link href="/product">Δες Προϊόντα</Link>
               </Button>
             </div>
           </div>

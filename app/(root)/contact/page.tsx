@@ -36,7 +36,7 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white">
+    <main className="min-h-screen flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/10">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-orange-400 mb-8 drop-shadow">
           Επικοινωνία

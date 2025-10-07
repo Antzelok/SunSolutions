@@ -5,6 +5,7 @@ import { getAllProducts } from "@/lib/actions/product.actions";
 import { Product } from "@/types";
 import { SolarCarousel } from "@/components/product/solar-carousel";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Αρχική",
@@ -33,8 +34,10 @@ const HomePage = async () => {
               Για κάθε σπίτι, για κάθε ανάγκη.
             </p>
             <div className="mt-4 flex gap-4">
-              <Button className="bg-orange-400">Ζήτα Προσφορά</Button>
-              <Button className="hover:bg-orange-400" variant="default">
+              <Button asChild className="bg-orange-400">
+                <Link href="/contact">Επικοινωνία</Link>
+              </Button>
+              <Button asChild className="hover:bg-orange-400" variant="default">
                 Δες Προϊόντα
               </Button>
             </div>

@@ -19,7 +19,7 @@ const HomePage = async () => {
       <main className="flex flex-col items-center m-5 shadow-2xl">
         <section className="relative w-full min-h-[100vh]">
           <Image
-            src="/images/random/burjkhalifa.png"
+            src="/images/sun.jpeg"
             alt="Sun"
             fill
             className="object-cover rounded-2xl"

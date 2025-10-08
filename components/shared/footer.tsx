@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="text-black">
       {/* Social Icons */}
-      <div className="text-center p-6 border-t border-gray-950 bg-gradient-to-l from-[#A2C3E0] to-[#489CDF]">
+      <div className="text-center p-6 border-t border-gray-950 bg-gradient-to-b from-[#6997b2] via-[#1a315c] to-[#0D1B2A] text-white">
         <div className="flex justify-center space-x-6">
           <Link
             href="#"
@@ -35,10 +35,10 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 px-5 border-t border-gray-900 bg-gradient-to-l from-[#A2C3E0] to-[#489CDF]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 px-5 border-t border-gray-900 bg-gradient-to-t from-[#6997b2] via-[#1a315c] to-[#0D1B2A] text-white">
         {/* Logo + Description */}
         <div>
-          <h5 className="text-2xl">Sun Solutions Co.</h5>
+          <h5 className="text-2xl font-semibold">Sun Solutions Co.</h5>
           <p className="mt-2">
             Φυσική ενέργεια, φυσική επιλογή. Ηλιακοί θερμοσίφωνες με υπογραφή
             ποιότητας.
@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-8">
           {/* Products */}
           <div>
-            <h5 className="font-mono">ΠΡΟΙΟΝΤΑ</h5>
+            <h5 className="font-mono">ΠΡΟΪΟΝΤΑ</h5>
             <ul className="mt-2 space-y-1">
               <li>
                 <Link
@@ -74,7 +74,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h5 className="text-lg">ΕΠΙΚΟΙΝΩΝΙΑ</h5>
+            <h5 className="text-lg font-mono">ΕΠΙΚΟΙΝΩΝΙΑ</h5>
             <ul className="mt-2 space-y-1">
               <li className="hover:text-orange-400">
                 📍 Athens, Fedriadon 120, 113 64
@@ -92,7 +92,7 @@ const Footer = () => {
                   href="tel:+306932462414"
                   className="hover:text-orange-400"
                 >
-                  📞 +30 693 246 2414
+                  📞 +30 695 525 2876
                 </Link>
               </li>
             </ul>
@@ -101,10 +101,12 @@ const Footer = () => {
       </div>
 
       {/* Copyright & Legal */}
-      <div className="flex justify-center border-t border-gray-900 bg-gradient-to-l from-[#A2C3E0] to-[#489CDF]">
-        &copy; 2025 Copyrights
+      <div className="flex justify-center border-t border-gray-900 bg-black text-white py-2">
+        &copy; 2025 Sun Solutions Co. — All rights reserved.
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center text-sm  p-2 space-y-1 md:space-y-0 md:space-x-4 bg-gradient-to-l from-[#A2C3E0] to-[#489CDF]">
+
+      {/* Legal Links */}
+      <div className="flex flex-col md:flex-row justify-center items-center text-sm p-2 space-y-1 md:space-y-0 md:space-x-4 bg-black text-white">
         <Link href="/terms&conditions">
           <span className="underline hover:text-orange-400 transition-colors">
             Terms and Conditions

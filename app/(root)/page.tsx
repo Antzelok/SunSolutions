@@ -52,7 +52,7 @@ const HomePage = async () => {
         ))}
       </div>
 
-      <div className="flex justify-center items-center w-full my-10">
+      <div className="flex justify-center items-center w-full my-5">
         <SolarCarousel />
       </div>
     </>

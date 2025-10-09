@@ -1,3 +1,6 @@
+import { z } from "zod";
+import { formSchema } from "@/lib/validators";
+
 export type Product = {
   id: string;
   name: string;
@@ -7,3 +10,5 @@ export type Product = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type FormData = z.infer<typeof formSchema>;

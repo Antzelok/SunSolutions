@@ -1,32 +1,46 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
+import { formSchema } from "@/lib/validators";
+import { defaultFormValues } from "@/lib/constants";
+import { FormData } from "@/types";
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
 const ContactPage = () => {
-  const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: defaultFormValues,
+  });
+
+  const onSubmit = async (data: FormData) => {
     setLoading(true);
-
     try {
-      if (!formRef.current) return;
-
-      await emailjs.sendForm(
+      await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current,
+        data,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
       toast.success("📬 Το μήνυμα στάλθηκε επιτυχώς!");
-      formRef.current.reset();
+      form.reset(defaultFormValues);
     } catch (error) {
       console.error("Email error:", error);
       toast.error("Κάτι πήγε στραβά. Προσπαθήστε ξανά αργότερα.");
@@ -42,71 +56,103 @@ const ContactPage = () => {
           Επικοινωνία
         </h1>
 
-        <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
-          <div>
-            <Label htmlFor="name" className="text-lg font-semibold text-orange-300">
-              Όνομα
-            </Label>
-            <Input
-              id="name"
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            {/* Όνομα */}
+            <FormField
+              control={form.control}
               name="name"
-              type="text"
-              required
-              placeholder="Προσθέστε το όνομά σας"
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg font-semibold text-orange-300">
+                    Όνομα
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Προσθέστε το όνομά σας"
+                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
-            <Label htmlFor="lastName" className="text-lg font-semibold text-orange-300">
-              Επώνυμο
-            </Label>
-            <Input
-              id="lastName"
+            {/* Επώνυμο */}
+            <FormField
+              control={form.control}
               name="lastName"
-              type="text"
-              required
-              placeholder="Προσθέστε το επώνυμό σας"
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg font-semibold text-orange-300">
+                    Επώνυμο
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Προσθέστε το επώνυμό σας"
+                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
-            <Label htmlFor="email" className="text-lg font-semibold text-orange-300">
-              Email
-            </Label>
-            <Input
-              id="email"
+            {/* Email */}
+            <FormField
+              control={form.control}
               name="email"
-              type="email"
-              required
-              placeholder="Προσθέστε το email σας"
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg font-semibold text-orange-300">
+                    Email
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder="Προσθέστε το email σας"
+                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
-            <Label htmlFor="phone" className="text-lg font-semibold text-orange-300">
-              Κινητό Τηλέφωνο
-            </Label>
-            <Input
-              id="phone"
+            {/* Κινητό Τηλέφωνο */}
+            <FormField
+              control={form.control}
               name="phone"
-              type="tel"
-              required
-              placeholder="Προσθέστε το κινητό σας τηλέφωνο"
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg font-semibold text-orange-300">
+                    Κινητό Τηλέφωνο
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="tel"
+                      placeholder="Προσθέστε το κινητό σας τηλέφωνο"
+                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
             />
-          </div>
 
-          <Button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-orange-400 hover:bg-orange-500 text-black font-semibold py-3 rounded-lg transition-all duration-200"
-          >
-            {loading ? "Αποστολή..." : "Ολοκλήρωση Αποστολής"}
-          </Button>
-        </form>
+            <Button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-orange-400 hover:bg-orange-500 text-black font-semibold py-3 rounded-lg transition-all duration-200"
+            >
+              {loading ? "Αποστολή..." : "Ολοκλήρωση Αποστολής"}
+            </Button>
+          </form>
+        </Form>
       </div>
     </main>
   );

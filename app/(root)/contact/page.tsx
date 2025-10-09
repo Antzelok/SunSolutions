@@ -20,6 +20,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { IoPhonePortrait } from "react-icons/io5";
+import Link from "next/link";
 
 const ContactPage = () => {
   const [loading, setLoading] = useState(false);
@@ -57,23 +61,40 @@ const ContactPage = () => {
           <h1 className="text-4xl font-bold text-orange-400 mb-6">
             Επικοινωνήστε μαζί μας
           </h1>
-          <p className="text-lg mb-4">
-            📍 Athens, Fedriadon 120, 113 64
-          </p>
-          <p className="text-lg mb-4">
-            ✉️ info@sunsolutions.gr
-          </p>
-          <p className="text-lg mb-4">
-            📞 +30 695 525 2876
-          </p>
+
+          <Link
+            href="https://www.google.com/maps/search/?api=1&query=Athens,+Fedriadon+120,+11364"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-lg mb-4 hover:text-orange-400"
+          >
+            <FaLocationDot className="mr-2 text-orange-400" />
+            Athens, Fedriadon 120, 113 64
+          </Link>
+
+          <Link
+            href="mailto:info@sunsolutions.gr"
+            className="flex items-center text-lg mb-4 hover:text-orange-400"
+          >
+            <IoIosMail className="mr-2 text-orange-400" />
+            info@sunsolutions.gr
+          </Link>
+
+          <Link
+            href="tel:+306955252876"
+            className="flex items-center text-lg mb-4 hover:text-orange-400"
+          >
+            <IoPhonePortrait className="mr-2 text-orange-400" />
+            +30 695 525 2876
+          </Link>
           <p className="text-gray-400 mt-6">
-            Είμαστε εδώ για να σας βοηθήσουμε να βρείτε την ιδανική λύση
-            ηλιακής ενέργειας για το σπίτι ή την επιχείρησή σας.
+            Είμαστε εδώ για να σας βοηθήσουμε να βρείτε την ιδανική λύση ηλιακής
+            ενέργειας για το σπίτι ή την επιχείρησή σας.
           </p>
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="m-5 p-5 bg-white/10 rounded-xl shadow-xl">
+        <div className="w-full m-2 p-5 bg-white/10 ">
           <h1 className="text-3xl font-bold text-orange-400 text-shadow-xl mb-5">
             Επικοινωνία
           </h1>
@@ -171,7 +192,7 @@ const ContactPage = () => {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-400 hover:bg-orange-500 text-black font-semibold py-3 rounded-lg transition-all duration-200"
+                className="w-full bg-orange-400 hover:bg-blue-950 font-semibold py-3 rounded-lg transition-all duration-200"
               >
                 {loading ? "Αποστολή..." : "Ολοκλήρωση Αποστολής"}
               </Button>

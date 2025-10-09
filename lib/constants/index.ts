@@ -4,3 +4,10 @@ export const APP_DESCRIPTION =
   "Solar Heater Installation and Maintenance Services";
 export const SERVER_URL =
   process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
+
+export const defaultFormValues = {
+  name: "",
+  lastName: "",
+  email: "",
+  phone: "",
+};

@@ -50,109 +50,134 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-6">
-      <div className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/10">
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-orange-400 mb-8 drop-shadow">
-          Επικοινωνία
-        </h1>
+    <main className="min-h-screen flex items-center justify-center px-4 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full">
+        {/* LEFT SIDE */}
+        <div className="flex flex-col justify-center p-5">
+          <h1 className="text-4xl font-bold text-orange-400 mb-6">
+            Επικοινωνήστε μαζί μας
+          </h1>
+          <p className="text-lg mb-4">
+            📍 Athens, Fedriadon 120, 113 64
+          </p>
+          <p className="text-lg mb-4">
+            ✉️ info@sunsolutions.gr
+          </p>
+          <p className="text-lg mb-4">
+            📞 +30 695 525 2876
+          </p>
+          <p className="text-gray-400 mt-6">
+            Είμαστε εδώ για να σας βοηθήσουμε να βρείτε την ιδανική λύση
+            ηλιακής ενέργειας για το σπίτι ή την επιχείρησή σας.
+          </p>
+        </div>
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            {/* Όνομα */}
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg font-semibold text-orange-300">
-                    Όνομα
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Προσθέστε το όνομά σας"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Επώνυμο */}
-            <FormField
-              control={form.control}
-              name="lastName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg font-semibold text-orange-300">
-                    Επώνυμο
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Προσθέστε το επώνυμό σας"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Email */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg font-semibold text-orange-300">
-                    Email
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder="Προσθέστε το email σας"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Κινητό Τηλέφωνο */}
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg font-semibold text-orange-300">
-                    Κινητό Τηλέφωνο
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="tel"
-                      placeholder="Προσθέστε το κινητό σας τηλέφωνο"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            <Button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-orange-400 hover:bg-orange-500 text-black font-semibold py-3 rounded-lg transition-all duration-200"
+        {/* RIGHT SIDE */}
+        <div className="m-5 p-5 bg-white/10 rounded-xl shadow-xl">
+          <h1 className="text-3xl font-bold text-orange-400 text-shadow-xl mb-5">
+            Επικοινωνία
+          </h1>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="w-full space-y-6"
             >
-              {loading ? "Αποστολή..." : "Ολοκλήρωση Αποστολής"}
-            </Button>
-          </form>
-        </Form>
+              {/* Όνομα */}
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-lg font-semibold text-orange-300">
+                      Όνομα
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Προσθέστε το όνομά σας"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Επώνυμο */}
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-lg font-semibold text-orange-300">
+                      Επώνυμο
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Προσθέστε το επώνυμό σας"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Email */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-lg font-semibold text-orange-300">
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder="Προσθέστε το email σας"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Κινητό Τηλέφωνο */}
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-lg font-semibold text-orange-300">
+                      Κινητό Τηλέφωνο
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="tel"
+                        placeholder="Προσθέστε το κινητό σας τηλέφωνο"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              <Button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-orange-400 hover:bg-orange-500 text-black font-semibold py-3 rounded-lg transition-all duration-200"
+              >
+                {loading ? "Αποστολή..." : "Ολοκλήρωση Αποστολής"}
+              </Button>
+            </form>
+          </Form>
+        </div>
       </div>
     </main>
   );

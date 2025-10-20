@@ -20,7 +20,7 @@ const HomePage = async () => {
         <section className="relative w-full h-120">
           <Image
             src="/images/random/burjkhalifa.png"
-            alt="Sun"
+            alt="burjkhalifa"
             fill
             className="object-fit rounded-2xl"
             priority

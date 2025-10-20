@@ -101,12 +101,12 @@ const Footer = () => {
       </div>
 
       {/* Copyright & Legal */}
-      <div className="flex justify-center border-t border-gray-900 bg-black text-white py-2">
+      <div className="flex justify-center border-t border-gray-900 bg-[#6997b2] text-white py-2">
         &copy; 2025 Sun Solutions Co. — All rights reserved.
       </div>
 
       {/* Legal Links */}
-      <div className="flex flex-col md:flex-row justify-center items-center text-sm p-2 space-y-1 md:space-y-0 md:space-x-4 bg-black text-white">
+      <div className="flex flex-col md:flex-row justify-center items-center text-sm p-2 space-y-1 md:space-y-0 md:space-x-4 bg-[#6997b2] text-white">
         <Link href="/terms&conditions">
           <span className="underline hover:text-orange-400 transition-colors">
             Terms and Conditions

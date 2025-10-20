@@ -17,16 +17,16 @@ const HomePage = async () => {
   return (
     <>
       <main className="flex flex-col items-center m-5 shadow-2xl">
-        <section className="relative w-full min-h-[100vh]">
+        <section className="relative w-full h-120">
           <Image
-            src="/images/sun.jpeg"
+            src="/images/random/burjkhalifa.png"
             alt="Sun"
             fill
-            className="object-cover rounded-2xl"
+            className="object-fit rounded-2xl"
             priority
           />
 
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-20">
+          <div className="absolute inset-0 flex flex-col justify-center items-start px-6">
             <h1 className="text-4xl md:text-5xl font-bold text-orange-400 drop-shadow-lg">
               Ηλιακή ενέργεια με επαγγελματική τοποθέτηση
             </h1>

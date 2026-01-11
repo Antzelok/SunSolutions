@@ -1,37 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SunSolutions
 
-## Getting Started
+[Live Demo](https://www.sunsolutions.gr)
 
-First, run the development server:
+## About
+SunSolutions is a web application for Sun Solutions Co., a company specializing in the installation and maintenance of solar water heaters and solar pool heating systems in Greece. The app provides a modern, responsive interface for customers and administrators to manage and track services, inquiries, and installations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Prisma**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
+- Responsive UI for desktop and mobile
+- Customer inquiry form integration
+- Admin dashboard for service tracking (planned)
+- Optimized for performance using Next.js
+- Easy deployment on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Technologies Used
+- **Next.js** – React framework for SSR and SSG
+- **TypeScript** – Static typing
+- **Tailwind CSS** – Utility-first styling
+- **Prisma** – ORM for database management
+- **PostgreSQL / SQLite** – Database
+- **Vercel** – Hosting platform
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # SunSolutions

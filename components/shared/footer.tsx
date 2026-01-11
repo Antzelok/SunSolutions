@@ -92,7 +92,8 @@ const Footer = () => {
                   href="tel:+306932462414"
                   className="hover:text-orange-400"
                 >
-                  📞 +30 695 525 2876
+                  📞 +30 695 555 5555
+                  
                 </Link>
               </li>
             </ul>
